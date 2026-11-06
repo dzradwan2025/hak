@@ -160,10 +160,10 @@
             }
         }
 
-        window.addEventListener('load', playAudio);
-        document.addEventListener('click', playAudio);
-        document.addEventListener('touchstart', playAudio);
-        document.addEventListener('keydown', playAudio);
+        // تشغيل الصوت بمجرد لمس الشاشة
+document.addEventListener('touchstart', playAudio, { once: true });
+document.addEventListener('mousedown', playAudio, { once: true });
+document.addEventListener('click', playAudio, { once: true });
     </script>
 </body>
 </html>
